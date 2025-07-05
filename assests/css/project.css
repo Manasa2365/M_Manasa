@@ -1,0 +1,179 @@
+/* === CSS for Projects Page Matching Skills Style === */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+}
+
+html, body {
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #f8f9fa;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 20px rgba(77, 171, 247, 0.1);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo a {
+  color: #4dabf7;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+ul li a:hover, ul li a.active {
+  color: #a370f0;
+  text-shadow: 0 0 8px rgba(163, 112, 240, 0.3);
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 3rem 0 2rem;
+  color: #4dabf7;
+}
+
+.title span {
+  color: #a370f0;
+}
+
+/* Projects Section */
+.projects {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(163, 112, 240, 0.25);
+}
+
+.project h2 {
+  color: #a370f0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #dee2e6;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project img, .project video {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(77, 171, 247, 0.15);
+  margin-top: 1rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #4dabf7;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(77, 171, 247, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #a370f0;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(163, 112, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #2d2f36;
+    position: absolute;
+    top: 70px;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+
+  .project img, .project video {
+    max-height: 250px;
+  }
+}

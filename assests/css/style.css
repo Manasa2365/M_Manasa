@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #f8f9fa;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1.2rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4dabf7;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: #a370f0;
+}
+
+input[type="checkbox"],
+.checkbox {
+  display: none;
+}
+
+/* Hero Section */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: nowrap; /* ensures same line on larger screens */
+  gap: 2rem;
+}
+
+/* Text Content */
+.content {
+  flex: 1;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #a370f0;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #4dabf7;
+}
+
+.title span {
+  color: #a370f0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #dee2e6;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.action__btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.action__btns a,
+.action__btns button {
+  background: #4dabf7;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+button.portfolio {
+  background: #a370f0;
+}
+
+.action__btns a:hover,
+.action__btns button:hover {
+  background: #a370f0;
+}
+
+/* Image */
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+.image img {
+  max-width: 400px;
+  width: 100%;
+  height: 500px; /* 👈 Add this line to reduce height */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #4dabf7;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .image img {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(33, 37, 41, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+}

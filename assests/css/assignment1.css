@@ -1,0 +1,214 @@
+/* === Updated Assignment Content CSS with No Glow and Modern Blue-Violet Theme === */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+}
+
+/* Body Setup */
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.7;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav__content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #4dabf7;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #a370f0;
+}
+
+/* Mobile Nav */
+input[type="checkbox"],
+.checkbox {
+  display: none;
+}
+
+/* Assignment Section */
+.assignment {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+.assignment h1.title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #4dabf7;
+}
+
+.assignment h1.title span {
+  color: #a370f0;
+}
+
+.assignment-content {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4dabf7;
+}
+
+.assignment-content h2 {
+  color: #4dabf7;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.assignment-content h3 {
+  color: #a370f0;
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.assignment-content p {
+  margin: 1rem 0;
+}
+
+.assignment-content ul,
+.assignment-content ol {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.assignment-content li {
+  margin-bottom: 0.5rem;
+}
+
+.assignment-content img {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 12px;
+  border: 2px solid #a370f0;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #ffffff;
+  background: #a370f0;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.back-btn:hover {
+  background: #4dabf7;
+  color: #000000;
+  border-color: #4dabf7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background: #2d2f36;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+
+  .assignment-content {
+    padding: 1.2rem;
+  }
+
+  .assignment h1.title {
+    font-size: 2rem;
+  }
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Small solid dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #4dabf7;
+  border-radius: 50%;
+}
+
+/* Faint ring around the dot */
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #a370f0;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}

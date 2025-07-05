@@ -1,0 +1,166 @@
+/* === Updated CSS for Assignments Page with No Glow Effects === */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+}
+
+html, body {
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #f8f9fa;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 20px rgba(77, 171, 247, 0.1);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4dabf7;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #a370f0;
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Section and Title */
+.assignment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.assignment-section .title {
+  font-size: 2.8rem;
+  color: #4dabf7;
+  margin-bottom: 2rem;
+}
+
+.assignment-section .title span {
+  color: #a370f0;
+}
+
+/* Assignments */
+.assignments-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  justify-content: center;
+}
+
+.assignment-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #94d3ff;
+  color: #a370f0;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  height: 140px;
+  padding: 1rem;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.assignment-frame span {
+  color: #a370f0;
+  font-size: 1.1rem;
+}
+
+.assignment-frame:hover {
+  transform: scale(1.05);
+  border-color: #a370f0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #adb5bd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #2d2f36;
+    position: absolute;
+    top: 70px;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,213 @@
+/* === CSS for Assignment Project Page: Aira - Modern Blue-Violet Theme, No Glow === */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+}
+
+html, body {
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #f8f9fa;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 20px rgba(77, 171, 247, 0.1);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4dabf7;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #a370f0;
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Assignment Content */
+.assignment {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.assignment__container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4dabf7;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4dabf7;
+}
+
+.assignment__container h2 {
+  color: #a370f0;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.assignment__container p,
+.assignment__container ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #dee2e6;
+  line-height: 1.7;
+}
+
+.assignment__container ul {
+  padding-left: 2rem;
+}
+
+.assignment__container li {
+  margin-bottom: 0.5rem;
+}
+
+.assignment__container img {
+  width: 100%;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #a370f0;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #4dabf7;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.download-btn:hover {
+  background: #a370f0;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #2d2f36;
+    position: absolute;
+    top: 70px;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .assignment {
+    padding: 1.5rem 1rem;
+  }
+
+  .assignment__container {
+    padding: 1.5rem;
+  }
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Small solid dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #4dabf7;
+  border-radius: 50%;
+}
+
+/* Faint ring around the dot */
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #a370f0;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}

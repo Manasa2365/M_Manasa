@@ -1,0 +1,195 @@
+/* === Updated CSS for Final Assignment Page (No Glow, Unified Blue-Violet Theme) === */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #1e1f26, #2d2f36, #3c3f4a);
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4dabf7;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #a370f0;
+}
+
+input[type="checkbox"],
+.checkbox {
+  display: none;
+}
+
+/* Assignment Section */
+.assignment {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.assignment__container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4dabf7;
+}
+
+.assignment .title {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #4dabf7;
+  margin-bottom: 2rem;
+}
+
+.assignment h2 {
+  color: #a370f0;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.assignment p,
+.assignment li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #dee2e6;
+  margin-top: 0.8rem;
+}
+
+.assignment ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.assignment img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  border: 2px solid #a370f0;
+  transition: transform 0.3s ease;
+}
+
+.assignment img:hover {
+  transform: scale(1.03);
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: #c084fc;
+  margin: 60px 0;
+  border-top: 2px dashed #a370f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    background: #2d2f36;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    cursor: pointer;
+  }
+
+  .assignment__container {
+    padding: 1.2rem;
+  }
+
+  .assignment .title {
+    font-size: 2rem;
+  }
+
+  .assignment h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Small solid dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #4dabf7;
+  border-radius: 50%;
+}
+
+/* Faint ring around the dot */
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #a370f0;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}
